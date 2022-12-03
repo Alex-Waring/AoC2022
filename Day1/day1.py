@@ -1,20 +1,19 @@
-elves = [[]]
-with open("input.txt") as f:
-    i = 0
-    for line in f:
-        if line == "\n":
-            i += 1
-            elves.append([])
-        else:
-            elves[i].append(int(line[:-1]))
+import heapq
 
-totals = []
+def getElves(input: str) -> list[int]:
+    return[
+        sum(map(int, lines.split()))
+        for lines in input.split("\n\n")
+    ]
 
-for elf in elves:
-    totals.append(sum(elf))
+def part1(elves: list[int]) -> int:
+    return max(elves)
 
-totals = sorted(totals, reverse=True)
+def part2(elves: list[int]) -> int:
+    return sum(heapq.nlargest(3, elves))
 
-print(totals)
-
-print(sum(totals[:3]))
+if __name__ == "__main__":
+    with open("/Users/alex.waring/code/AoC2022/Day1/input.txt") as file:
+        print(part1(getElves(file.read())))
+    with open("/Users/alex.waring/code/AoC2022/Day1/input.txt") as file:
+        print(part2(getElves(file.read())))
