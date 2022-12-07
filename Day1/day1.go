@@ -63,7 +63,7 @@ func getElves(input string) []int {
 }
 
 func main() {
-	input, err := os.ReadFile("/Users/alex.waring/code/AoC2022/Day1/input.txt")
+	input, err := os.ReadFile("input.txt")
 	check(err)
 	output := getElves(string(input))
 	check(err)

@@ -51,7 +51,7 @@ def part2(input: str) -> int:
     return(score)
 
 if __name__ == "__main__":
-    with open("/Users/alex.waring/code/AoC2022/Day2/input.txt") as file:
+    with open("input.txt") as file:
         scores = []
         for line in file.readlines():
             scores.append(part2(line))

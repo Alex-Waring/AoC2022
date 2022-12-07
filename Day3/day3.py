@@ -25,13 +25,13 @@ def part2(line1: str, line2, line3):
             return(getPriorities(letter))
 
 if __name__ == "__main__":
-    with open("/Users/alex.waring/code/AoC2022/Day3/input.txt") as file:
+    with open("input.txt") as file:
         priorities = []
         for line in file.readlines():
             priorities.append(part1(line))
         print(sum(priorities))
 
-    with open("/Users/alex.waring/code/AoC2022/Day3/input.txt") as file:
+    with open("input.txt") as file:
         priorities = []
 
         lines = []

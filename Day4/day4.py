@@ -28,7 +28,7 @@ def part2(input):
     return output
 
 if __name__ == "__main__":
-    with open("/Users/alex.waring/code/AoC2022/Day4/input.txt") as file:
+    with open("input.txt") as file:
         sections = []
         for line in file:
             sections.append(parseInput(line[:-1]))

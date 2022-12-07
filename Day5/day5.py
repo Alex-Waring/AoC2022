@@ -31,7 +31,7 @@ def parser(line):
 
 
 if __name__ == "__main__":
-    with open("/Users/alex.waring/code/AoC2022/Day5/input.txt") as file:
+    with open("input.txt") as file:
         for line in file:
             instruction = parser(line)
             moveCratePart2(int(instruction[0]), int(instruction[1]), int(instruction[2]))

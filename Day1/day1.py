@@ -13,7 +13,7 @@ def part2(elves: list[int]) -> int:
     return sum(heapq.nlargest(3, elves))
 
 if __name__ == "__main__":
-    with open("/Users/alex.waring/code/AoC2022/Day1/input.txt") as file:
+    with open("input.txt") as file:
         print(part1(getElves(file.read())))
-    with open("/Users/alex.waring/code/AoC2022/Day1/input.txt") as file:
+    with open("input.txt") as file:
         print(part2(getElves(file.read())))
