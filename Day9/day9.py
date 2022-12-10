@@ -65,7 +65,7 @@ def calculateDistance(first, second):
     else:
         return False
 
-with open("/Users/alex.waring/code/AoC2022/Day9/input.txt") as file:
+with open("input.txt") as file:
     for line in file:
         line = line[:-1]
         command = line.split(" ")
