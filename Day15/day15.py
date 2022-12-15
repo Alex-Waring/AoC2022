@@ -36,11 +36,10 @@ def part1_loop(start, end, sensors, results):
                 break
         if not poss:
             count += 1
-    print(count)
     results.append(count)
 
 
-with open("input.txt") as file:
+with open("./input.txt") as file:
     cave = list()
     sensors = []
 
@@ -54,10 +53,10 @@ with open("input.txt") as file:
         beacon_y = int(values[9].split("=")[1])
 
         sensors.append(Sensor(sensor_x, sensor_y, beacon_x, beacon_y))
-    start = time.perf_counter()
 
 if __name__ == '__main__':
 
+    start = time.perf_counter()
     sections = [
         [-1000000, 0],
         [0, 1000000],
@@ -84,9 +83,9 @@ if __name__ == '__main__':
         proc.join()
 
     finish = time.perf_counter()
-    print(sum(results))
-    print(f'Finished in {round(finish-start,2 )} second(s)')
+    print(f'Part 1 finished in {round(finish-start,2 )} second(s): {sum(results)}')
         
+    start = time.perf_counter()
     solver = z3.Solver()
     x, y = z3.Int("x"), z3.Int("y")
 
@@ -106,4 +105,5 @@ if __name__ == '__main__':
 
     solver.check()
     model = solver.model()
-    print("Part 2:", model[x].as_long() * 4000000 + model[y].as_long())
+    finish = time.perf_counter()
+    print(f'Part 2 finished in {round(finish-start,2 )} second(s): ', model[x].as_long() * 4000000 + model[y].as_long())
