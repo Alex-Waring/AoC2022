@@ -24,7 +24,7 @@ def SPF(start, end):
     return len(path) - 1
 
 
-with open("/Users/alex.waring/code/AoC2022/Day12/input.txt") as file:
+with open("input.txt") as file:
     for line in file:
         line = line.strip()
         row = []

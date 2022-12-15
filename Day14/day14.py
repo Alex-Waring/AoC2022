@@ -55,7 +55,7 @@ def checkBlocked(cave):
         return False
 
 
-with open("/Users/alex.waring/code/AoC2022/Day14/input.txt") as file:
+with open("input.txt") as file:
     cave = list()
     y_values = []
 
@@ -80,7 +80,7 @@ while not checkBlocked(cave):
     sandFall(max(y_values))
     sand += 1
 
-with open("/Users/alex.waring/code/AoC2022/Day14/output.txt", "w") as file:
+with open("output.txt", "w") as file:
     for row in cave:
         output = ""
         for index in row:

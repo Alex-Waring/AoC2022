@@ -37,7 +37,7 @@ def compareTransform(left, right):
     else:
         return +1
         
-with open("/Users/alex.waring/code/AoC2022/Day13/input.txt") as file:
+with open("input.txt") as file:
     
     data = []
 
